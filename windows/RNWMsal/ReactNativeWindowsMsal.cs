@@ -10,11 +10,11 @@ namespace RNWMsal
     [ReactModule]
     class ReactNativeWindowsMsal
     {
-        [ReactConstant]
-        public double E = Math.E;
+        // [ReactConstant]
+        // public double E = Math.E;
 
-        [ReactConstant("Pi")]
-        public double PI = Math.PI;
+        // [ReactConstant("Pi")]
+        // public double PI = Math.PI;
 
         [ReactMethod]
         public void Make(double a, double b)
