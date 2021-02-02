@@ -22,11 +22,11 @@ namespace RNWMsal
             double result = a + b;
         }
 
-        [ReactMethod("have")]
-        public double Have(double a, double b)
-        {
-            double result = a + b;
-        }
+        // [ReactMethod("have")]
+        // public double Have(double a, double b)
+        // {
+        //     double result = a + b;
+        // }
 
         [ReactMethod]
         public double Take(double a, double b)
