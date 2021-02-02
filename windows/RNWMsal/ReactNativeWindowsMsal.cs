@@ -1,8 +1,5 @@
 ﻿using Microsoft.ReactNative.Managed;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace RNWMsal
@@ -33,7 +30,7 @@ namespace RNWMsal
         }
 
         [ReactMethod("getLoginToken")]
-        public async Task GetLoginTokenAsync(JSValue parameters, IReactPromise<string> promise)
+        public async void GetLoginTokenAsync(JSValue parameters, IReactPromise<string> promise)
         {
             string tenant = parameters["tenant"].AsString();
             string clientId = parameters["clientId"].AsString();
