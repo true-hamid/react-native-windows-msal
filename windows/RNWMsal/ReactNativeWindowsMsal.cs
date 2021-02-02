@@ -31,5 +31,14 @@ namespace RNWMsal
         {
             double result = a + b;
         }
+
+        [ReactMethod("getLoginToken")]
+        public async Task GetLoginTokenAsync(JSValue parameters, IReactPromise<string> promise)
+        {
+            string tenant = parameters["tenant"].AsString();
+            string clientId = parameters["clientId"].AsString();
+            string result = await MsalLogin.CallLoginAPI(tenant, clientId);
+            promise.Resolve(result);
+        }
     }
 }
