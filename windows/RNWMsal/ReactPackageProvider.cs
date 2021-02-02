@@ -9,7 +9,6 @@ namespace RNWMsal
         public void CreatePackage(IReactPackageBuilder packageBuilder)
         {
             CreatePackageImplementation(packageBuilder);
-            packageBuilder.AddAttributedModules();
         }
 
         /// <summary>
