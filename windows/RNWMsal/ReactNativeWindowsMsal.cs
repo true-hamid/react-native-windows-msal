@@ -27,7 +27,7 @@ namespace RNWMsal
         }
 
         [ReactMethod("add")]
-        public double Add(double a, double b)
+        public void Add(double a, double b)
         {
             double result = a + b;
         }
