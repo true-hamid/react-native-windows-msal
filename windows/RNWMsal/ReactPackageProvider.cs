@@ -1,4 +1,6 @@
 ﻿using Microsoft.ReactNative;
+using Microsoft.ReactNative.Managed;
+
 
 namespace RNWMsal
 {
@@ -7,6 +9,7 @@ namespace RNWMsal
         public void CreatePackage(IReactPackageBuilder packageBuilder)
         {
             CreatePackageImplementation(packageBuilder);
+            packageBuilder.AddAttributedModules();
         }
 
         /// <summary>
