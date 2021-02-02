@@ -17,13 +17,13 @@ namespace RNWMsal
         // public double PI = Math.PI;
 
         [ReactMethod]
-        public void Make(double a, double b)
+        public void make(double a, double b)
         {
             double result = a + b;
         }
 
         [ReactMethod("have")]
-        public void Have(double a, double b)
+        public void hae(double a, double b)
         {
             double result = a + b;
         }
