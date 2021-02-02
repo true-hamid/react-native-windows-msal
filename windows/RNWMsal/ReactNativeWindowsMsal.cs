@@ -16,6 +16,25 @@ namespace RNWMsal
         [ReactConstant("Pi")]
         public double PI = Math.PI;
 
+        [ReactMethod]
+        public double Make(double a, double b)
+        {
+            double result = a + b;
+        }
+
+        [ReactMethod("have")]
+        public double Have(double a, double b)
+        {
+            double result = a + b;
+        }
+
+        [ReactMethod]
+        public double Take(double a, double b)
+        {
+            double result = a + b;
+            return result;
+        }
+
         [ReactMethod("add")]
         public double Add(double a, double b)
         {
