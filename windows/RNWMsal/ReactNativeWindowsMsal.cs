@@ -16,6 +16,9 @@ namespace RNWMsal
         [ReactConstant("Pi")]
         public double PI = Math.PI;
 
+        [ReactConstant]
+        public double STR = 'TEST NATIVE MODULE';
+
         [ReactMethod]
         public double subtract(double a, double b)
         {
