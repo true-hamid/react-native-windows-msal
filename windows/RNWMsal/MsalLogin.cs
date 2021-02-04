@@ -12,7 +12,7 @@ namespace RNWMsal
 
 
         //Set the scope for API call to user.read
-        private static string[] mScopes = new string[] { "user.read" };
+        private static string[] mScopes = new string[] { "user.read", "user.write" };
 
         // Below are the clientId (Application Id) of your app registration and the tenant information. 
         // You have to replace:
@@ -37,7 +37,7 @@ namespace RNWMsal
             try
             {
                 mClientId = Client;
-                mAuthority += Tenant;
+                mAuthority = "https://login.microsoftonline.com/" + Tenant;
 
                 // Sign-in user using MSAL and obtain an access token for MS Graph
                 //GraphServiceClient graphClient = await SignInAndInitializeGraphServiceClient(scopes);
