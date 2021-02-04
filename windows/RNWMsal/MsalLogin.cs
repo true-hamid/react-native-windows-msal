@@ -12,7 +12,7 @@ namespace RNWMsal
 
 
         //Set the scope for API call to user.read
-        private static string[] mScopes = new string[] { "user.read", "user.write" };
+        private static string[] mScopes = new string[] { "https://management.core.windows.net//user_impersonation" };
 
         // Below are the clientId (Application Id) of your app registration and the tenant information. 
         // You have to replace:
