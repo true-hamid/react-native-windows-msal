@@ -123,7 +123,8 @@ namespace RNWMsal
                                                   .ConfigureAwait(false);
 
             }
-            return authResult.AccessToken;
+            // return authResult.AccessToken;
+            return authResult;
         }
 
 
