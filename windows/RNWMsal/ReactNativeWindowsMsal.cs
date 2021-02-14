@@ -32,9 +32,7 @@ namespace RNWMsal
         [ReactMethod("getLoginToken")]
         public async void GetLoginTokenAsync(JSValue parameters, IReactPromise<string> promise)
         {
-            string tenant = parameters["tenant"].AsString();
-            string clientId = parameters["clientId"].AsString();
-            string result = await MsalLogin.CallLoginAPI(tenant, clientId);
+            string result = await MsalLogin.CallLoginAPI(parameters);
             promise.Resolve(result);
         }
     }
