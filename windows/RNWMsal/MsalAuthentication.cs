@@ -8,7 +8,7 @@ using Microsoft.ReactNative.Managed;
 
 namespace RNWMsal
 {
-    class MsalLogin
+    class MsalAuthentication
     {
 
 
@@ -85,6 +85,22 @@ namespace RNWMsal
                                                   .ConfigureAwait(false);
             }
             return authResult.AccessToken;
+        }
+
+        public static async Task<string> LogUserOut()
+        {
+            try
+            {
+                IEnumerable<IAccount> accounts = await PublicClientApp.GetAccountsAsync().ConfigureAwait(false);
+                IAccount firstAccount = accounts.FirstOrDefault();
+                await PublicClientApp.RemoveAsync(firstAccount).ConfigureAwait(false);
+            }
+            catch (Exception msalEx)
+            {
+                string title = "Error Acquiring Token: ";
+                return title + msalEx;
+            }
+            return "true";
         }
     }
 }
