@@ -1,16 +1,9 @@
 {
-  "name": "true-hamid/react-native-windows-msal",
+  "name": "@true-hamid/react-native-windows-msal",
   "title": "React Native Windows Msal",
   "version": "1.0.0",
   "description": "TODO",
   "main": "index.js",
-  "files": [
-    "README.md",
-    "android",
-    "index.js",
-    "ios",
-    "react-native-windows-msal.podspec"
-  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
