@@ -124,7 +124,7 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="MsalLogin.cs" />
+    <Compile Include="MsalAuthentication.cs" />
     <Compile Include="ReactPackageProvider.cs" />
     <Compile Include="ReactNativeWindowsMsal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
