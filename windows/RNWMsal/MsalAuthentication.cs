@@ -87,7 +87,7 @@ namespace RNWMsal
             return authResult.AccessToken;
         }
 
-        public static async Task<string> LogUserOut()
+        public static async Task<string> LogoutUser()
         {
             try
             {
@@ -100,7 +100,7 @@ namespace RNWMsal
                 string title = "Error Acquiring Token: ";
                 return title + msalEx;
             }
-            return "true";
+            return "success";
         }
     }
 }

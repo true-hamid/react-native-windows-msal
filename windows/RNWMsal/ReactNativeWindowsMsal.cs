@@ -13,5 +13,12 @@ namespace RNWMsal
             string result = await MsalAuthentication.CallLoginAPI(parameters);
             promise.Resolve(result);
         }
+
+        [ReactMethod("logoutUser")]
+        public async void LogoutUser(IReactPromise<string> promise)
+        {
+            string result = await MsalAuthentication.LogoutUser();
+            promise.Resolve(result);
+        }
     }
 }
