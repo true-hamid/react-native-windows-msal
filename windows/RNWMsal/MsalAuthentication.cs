@@ -12,9 +12,8 @@ namespace RNWMsal
     {
 
 
-        //TODO: expose scopes to rn 
-        //Set the scope for API call to user.read
-        private static string[] mScopes = new string[] { "Calendars.ReadWrite", "Calendars.Read" };
+        //Scopes for the token
+        static List<String> mScopes = new List<String>();
 
         private static string mClientId = "";
 
@@ -26,9 +25,13 @@ namespace RNWMsal
         private static AuthenticationResult authResult;
 
 
-        public static async Task<string> CallLoginAPI(JSValue parameters){
+        public static async Task<string> CallLoginAPI(JSValue parameters, JSValueArray scopes){
             try
             {
+                foreach (string scope in scopes)
+                {
+                    mScopes.Add(scope);
+                }
                 string tenant = parameters["tenant"].AsString();
                 mClientId = parameters["clientId"].AsString();
                 mAuthority = "https://login.microsoftonline.com/" + tenant;
@@ -39,12 +42,12 @@ namespace RNWMsal
             }
             catch (MsalException msalEx)
             {
-                string title = "Error Acquiring Token: ";
+                string title = "MSAL Token Exception: ";
                 return title + msalEx;
             }
             catch (Exception ex)
             {
-                string title = "Error Acquiring Token Silently: ";
+                string title = "Exception in Token acquisition: ";
                 //await DisplayMessageAsync($"Error Acquiring Token Silently:{System.Environment.NewLine}{ex}");
                 return title + ex;
             }
@@ -98,7 +101,7 @@ namespace RNWMsal
             }
             catch (Exception msalEx)
             {
-                string title = "Error Acquiring Token: ";
+                string title = "Token Logout error: ";
                 return title + msalEx;
             }
             return "success";
