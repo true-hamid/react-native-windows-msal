@@ -12,8 +12,9 @@ namespace RNWMsal
     {
 
 
+        //TODO: expose scopes to rn 
         //Set the scope for API call to user.read
-        private static string[] mScopes = new string[] { "https://management.core.windows.net//user_impersonation" };
+        private static string[] mScopes = new string[] { "Calendars.ReadWrite", "Calendars.Read" };
 
         private static string mClientId = "";
 
